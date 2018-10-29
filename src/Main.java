@@ -4,7 +4,7 @@ Sources used: Professor Scott VanSelow, https://www.javatpoint.com/
 , https://docs.oracle.com/javase/tutorial/java, Philemon Petit-Frere
 This file creates the driver class Main */
 
-import  java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
