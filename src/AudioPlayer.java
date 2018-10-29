@@ -8,8 +8,8 @@ public class AudioPlayer extends  Product implements MultimediaControl {
   private ItemType mediaType;
 
   public AudioPlayer() {
-    super("The Zune");
-    audioSpecification = "MP3-A";
+    super("Player");
+    audioSpecification = "";
     mediaType = ItemType.AUDIO;
   }
 
