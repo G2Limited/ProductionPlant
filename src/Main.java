@@ -4,7 +4,7 @@ Sources used: Professor Scott VanSelow, https://www.javatpoint.com/
 , https://docs.oracle.com/javase/tutorial/java, Philemon Petit-Frere
 This file creates the driver class Main */
 
-import java.util.ArrayList;
+import  java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -25,9 +25,9 @@ public class Main {
     PlayerDriver.testPlayer();*/
 
     //Write ome line of code to create and Array of products
-    ArrayList<Product> productList = new ArrayList<>(); //Change to studentProducts for replit
+    ArrayList<Product> studentProducts = new ArrayList<>(); 
     //Write one line of code to call testCollection and assign the result to the arraylist
-    productList = testCollection();
+    studentProducts = testCollection();
 
     //Add functionality to your classes that would allow them to be sorted by name with the
     //Collections.sort method.
@@ -36,8 +36,8 @@ public class Main {
 
     //Completed testCollection header
     //Demonstrate Product's printType
-    Product.printType(productList,MoviePlayer.class);
-    Product.printType(productList,AudioPlayer.class);
+    Product.printType(studentProducts,MoviePlayer.class);
+    Product.printType(studentProducts,AudioPlayer.class);
 
   }
   public static  <T> void print(List<T> products){
@@ -47,7 +47,7 @@ public class Main {
     }
   }
 
-  private static ArrayList<Product> testCollection() {
+  static ArrayList<Product> testCollection() {
 
     /*Manufacturer : OracleProduction
     Serial Number : 3
