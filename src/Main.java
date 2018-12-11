@@ -10,6 +10,9 @@ import java.util.List;
 
 public class Main {
 
+  /**
+   * Main class.
+   */
   public static void main(String[] args) {
     /*//create new objects from class Widget
     Widget w1 = new Widget("Widget 1");
@@ -25,9 +28,9 @@ public class Main {
     PlayerDriver.testPlayer();*/
 
     //Write ome line of code to create and Array of products
-    ArrayList<Product> studentProducts = new ArrayList<>(); 
+    ArrayList<Product> productList = new ArrayList<>(); //Change to studentProducts for replit
     //Write one line of code to call testCollection and assign the result to the arraylist
-    studentProducts = testCollection();
+    productList = testCollection();
 
     //Add functionality to your classes that would allow them to be sorted by name with the
     //Collections.sort method.
@@ -36,18 +39,22 @@ public class Main {
 
     //Completed testCollection header
     //Demonstrate Product's printType
-    Product.printType(studentProducts,MoviePlayer.class);
-    Product.printType(studentProducts,AudioPlayer.class);
+    Product.printType(productList,MoviePlayer.class);
+    Product.printType(productList,AudioPlayer.class);
 
   }
-  public static  <T> void print(List<T> products){
+
+  /**
+   * array to store list of products.
+   */
+  public static  <T> void print(List<T> products) {
 
     for (T t :products) {
       System.out.println(t.toString());
     }
   }
 
-  static ArrayList<Product> testCollection() {
+  private static ArrayList<Product> testCollection() {
 
     /*Manufacturer : OracleProduction
     Serial Number : 3
