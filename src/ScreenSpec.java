@@ -6,7 +6,10 @@ public interface ScreenSpec {
   // public int getResponseTime();
 
   public String getResolution();
+
   public int getRefreshRate();
+
   public int getResponseTime();
+
 
 }
