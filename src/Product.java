@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public abstract class Product implements Item,Comparable <Product> {
+public abstract class Product implements Item,Comparable<Product> {
 
   ////Add the following fields to Product
   // int serialNumber
@@ -21,6 +21,11 @@ public abstract class Product implements Item,Comparable <Product> {
   final String manufacturer = Item.manufacturer;
   static int currentProductionNumber = 1;
 
+  /**
+   * Returns 1 if name Greater than n.getName
+   * Return 0 if both are equal
+   * Return -1 if name is lessThan n.getName
+   */
   public int compareTo(Product n) {
 
     return name.compareTo(n.getName());
@@ -63,9 +68,9 @@ public abstract class Product implements Item,Comparable <Product> {
     manufacturedOn = new Date();
   }
 
-  static void printType(List<?> list, Class<? extends Product> c){
+  static void printType(List<?> list, Class<? extends Product> c) {
     //Check if Class matches the Object's class and if class matches then print toString.
-    for (Object o : list){
+    for (Object o : list) {
       if (c.isInstance(o)) {
         System.out.println(o.toString());
       }
