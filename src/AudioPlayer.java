@@ -7,6 +7,9 @@ public class AudioPlayer extends  Product implements MultimediaControl {
   private String audioSpecification;
   private ItemType mediaType;
 
+  /**
+   * We require a concrete class that will allow us to capture the details of an audio player.
+   */
   public AudioPlayer() {
     super("Player");
     audioSpecification = "";
@@ -15,10 +18,10 @@ public class AudioPlayer extends  Product implements MultimediaControl {
 
   //Create a constructor that will take in 2 parameters – name and audioSpecification.
   //The constructor should call its parents constructor and also setup the media type.
-  AudioPlayer(String name, String audioSpecification){
+  AudioPlayer(String name, String audioSpecification) {
     super(name);
-    this.audioSpecification= audioSpecification;
-    this.mediaType= ItemType.AUDIO ;
+    this.audioSpecification = audioSpecification;
+    this.mediaType = ItemType.AUDIO;
   }
 
   public String getAudioSpecification() {
@@ -55,15 +58,17 @@ public class AudioPlayer extends  Product implements MultimediaControl {
   @Override
   public String toString() {
     return
-        super.toString()+
-            "Audio Spec : " + audioSpecification +
+        super.toString()
+            +
+            "Audio Spec : " + audioSpecification
+            +
             "\nType : " + mediaType
         ;
   }
 
   //Create a driver class for AudioPlayer that will test to see whether we can instantiate
   //occurrences of it, use the media controls and print out their details to the console.
-  public static void main(String [] args){
+  public static void main(String [] args) {
     AudioPlayer ap = new AudioPlayer("testName","testSpecs");
     System.out.println(ap.toString());
   }
