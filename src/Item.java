@@ -5,7 +5,6 @@ manufacturer, set methods for ProductionNumber and Name, and get methods
 for Name, Manufacture Date, and Serial Number*/
 
 import java.util.Date;
-import java.util.*;
 
 public interface Item {
 
