@@ -5,12 +5,18 @@ public class MoviePlayer extends Product implements MultimediaControl {
   Screen screen;
   MonitorType monitorType;
 
+  /**
+   * The production facility will also create portable movie players.
+   */
   public MoviePlayer(String name, Screen screen, MonitorType monitorType) {
     super(name);
     this.screen = screen;
     this.monitorType = monitorType;
   }
 
+  /**
+   * The main difference between these and the audio players is that they contain screens.
+   */
   public MoviePlayer() {
     super("Windows Media PLayer Classic");
     screen = new Screen("200x200", 33, 33);
@@ -43,8 +49,12 @@ public class MoviePlayer extends Product implements MultimediaControl {
   //screen details.
   @Override
   public String toString() {
-    return super.toString() +
-        "Screen : " + screen +
-        "\nMonitorType : " + monitorType;
+    return super.toString()
+        +
+        "Screen : "
+        + screen
+        +
+        "\nMonitorType : "
+        + monitorType;
   }
 }
