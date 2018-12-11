@@ -27,12 +27,22 @@ public class Screen implements ScreenSpec {
   //the Product Class
   @Override
   public String toString() {
-    String line = "Resolution : " + resolution + "\n" +
-        "Refresh Rate : " + refreshrate + "\n" +
-        "Response Time : " + responsetime;
+    String line = "Resolution : " + resolution
+        + "\n"
+        +
+        "Refresh Rate : "
+        + refreshrate
+        + "\n"
+        +
+        "Response Time : "
+        + responsetime;
     return line;
   }
 
+  /**
+   * Screen that implements ScreenSpec.  Add three fieldsString resolutionint refreshrateint
+   * responsetime.
+   */
   public Screen(String resolution, int refreshrate, int responsetime) {
     this.resolution = resolution;
     this.refreshrate = refreshrate;
