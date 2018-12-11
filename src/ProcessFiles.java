@@ -10,6 +10,9 @@ public class ProcessFiles {
   private Path p2;
   private Path p3;
 
+  /**
+   *  will create a directory and file structure by combining the path and file name.
+   */
   public ProcessFiles() {
     p = Paths.get("C:/LineTests");
     p2 = Paths.get("TestResults.txt");
@@ -25,9 +28,13 @@ public class ProcessFiles {
     }
   }
 
+  /**
+   * save the product information to file followed by the employee information.  This information
+   * should be appended so that no historical information is lost in this process.
+   */
   public void WriteFile(String emp) throws IOException {
-    FileWriter writer = new FileWriter(p3.toString(),true);
-    PrintWriter printWriter = new PrintWriter(writer);
+    FileWriter fileWriter = new FileWriter(p3.toString(),true);
+    PrintWriter printWriter = new PrintWriter(fileWriter);
 
     printWriter.println(emp);
 
